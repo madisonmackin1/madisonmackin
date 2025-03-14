@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WILSONS HEADER</title>
+    <style>
+        .narvar {
+            --header-background-color: #FFFFFF;
+            --header-font: "Roboto", sans-serif;;
+            --header-link-color: #000000;
+            --header-menu-color: ;
+            --header-nav-items-display: flex;
+            --header-nav-display: block;
+            --header-logo-max-height: 3.125rem;
+        }
+        .narvar-header {
+            display: flex;
+            background: #ffffff;
+            height: 7.5rem;
+            flex-direction: column;
+            margin-bottom: 0.5rem;
+            padding-top: 1rem;
+        }
+        .narvar-top-bar {
+            align-items: center;
+            display: flex;
+            height: 5.5rem;
+            justify-content: center;
+            z-index: 2;
+        }
+        .narvar-logo img {
+            max-height: var(--header-logo-max-height);
+        }
+        .narvar-nav {
+            background: #ffffff;;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin: 0 -50vw 0 -50vw;
+            z-index: 1;
+        }
+        .narvar-menu {
+            cursor: pointer;
+            display: none;
+            position: relative;
+            width: 1.375rem;
+            height: 1.375rem;
+        }
+        .narvar-list {
+            font-family: var(--header-font);
+            font-weight: 600;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .narvar-list a {
+            color: var(--header-link-color);
+            text-decoration: none;
+            list-style-type: none;
+        }
+        .narvar-list li {
+            margin: 1rem;
+        }
+        .narvar-hamburger {
+            display: block;
+            background: #000000;
+            box-shadow: 0 -0.5rem #000000, 0 0.5rem #000000;
+            height: 0.125rem;
+            margin: -0.1875rem auto;
+            position: relative;
+            top: 50%;
+            width: 1.375rem;
+        }
+        #narvar-menu-toggle, .narvar-icon {
+            display: none;
+        }
+        @media only screen and (max-width: 41.25rem) {
+            .narvar-icon {
+                display: var(--header-nav-items-display);
+                height: 2.5rem;
+                margin-left: 1rem;
+            }
+            .narvar-header {
+                padding-top: 0;
+                height: 5.5rem;
+            }
+            .narvar-top-bar {
+                justify-content: left;
+                align-items: center;
+            }
+            .narvar-logo img {
+                max-height: 2.5rem;
+                max-width: 80%;
+                justify-self: center;
+                margin: auto;
+            }
+            #narvar-logo-mobile, .narvar-nav-link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .narvar-logo-link {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                width: calc(100%-108px);
+            }
+            .narvar-nav {
+                display: var(--header-nav-display);
+                opacity: 0.9;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                margin: 0;
+                transform: translateX(-100vw);
+                transition: transform 200ms;
+                width: 100vw;
+            }
+            .narvar-menu {
+                display: block;
+                padding: 2rem 1rem;
+            }
+            #narvar-menu-toggle:checked + .narvar-nav {
+                transform: translateX(0);
+            }
+            .narvar-list {
+                flex-direction: column;
+                justify-content: start;
+                margin-top: 5.5rem;
+                border-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="Column-module_column__ihEsE" style="grid-column: span 12;">
+        <div class="Content-module_content__dii8H">
+            <div style="position: relative;">
+                <a class="TextLink-module_textLink__cMa5a" href="#content" target="_self">
+                    Skip to content
+                </a>
+                <div style="white-space: normal; position: fixed; top: 0px; left: 0px; right: 0px; z-index: 99;">
+                    <header>
+                        <div class="narvar">
+                            <div class="narvar-header">
+                                <div class="narvar-top-bar">
+                                    <label for="narvar-menu-toggle" class="narvar-icon">
+                                        <div class="narvar-hamburger"></div>
+                                    </label>
+                                    <h1 class="narvar-logo" id="narvar-logo-mobile" role="presentation">
+                                        <a class="narvar-nav-link" href="https://www.ghbass.com/">
+                                            <img src="https://cdn.shopify.com/s/files/1/0841/9609/8329/files/logo-gh-bass.png?v=1717022344">
+                                        </a>
+                                    </h1>
+                                </div>
+                                <input type="checkbox" id="narvar-menu-toggle">
+                                <nav class="narvar-nav">
+                                    <ul class="narvar-list">
+                                        <li><a class="narvar-nav-link" href="https://www.ghbass.com/collections/new-arrivals">NEW ARRIVALS</a></li>
+                                        <li><a class="narvar-nav-link" href="https://www.ghbass.com/collections/women">WOMEN</a></li>
+                                        <li><a class="narvar-nav-link" href="https://www.ghbass.com/collections/men">MEN</a></li>
+                                        <li><a class="narvar-nav-link" href="https://www.ghbass.com/collections/weejuns">WEEJUNS</a></li>
+                                        <li><a class="narvar-nav-link" href="https://www.ghbass.com/collections/sale-view-all">SALE</a></li>
+                                        <li><a class="narvar-nav-link" href="https://www.ghbass.com/collections/shop-all">SHOP ALL</a></li>
+                                        <li><a class="narvar-nav-link" href="https://www.ghbass.com/pages/size-guide">SIZE GUIDE</a></li>
+                                        <li><a class="narvar-nav-link" href="https://www.ghbass.com/account/login">MY ACCOUNT</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+        <div aria-hidden="true" style="visibility: hidden; white-space: normal;">
+            <header>
+                <div class="narvar">
+                    <div class="narvar-header">
+                        <div class="narvar-top-bar">
+                            <label for="narvar-menu-toggle" class="narvar-icon">
+                                <div class="narvar-hamburger"></div>
+                            </label>
+                            <h1 class="narvar-logo" role="presentation">
+                                <a class="narvar-nav-link" href="https://www.donnakaran.com/">
+                                    <img src="https://www.mackenzie-childs.com/on/demandware.static/Sites-MacKenzie-Childs-Site/-/default/dwaf7b015a/images/logo.svg">
+                                </a>
+                            </h1>
+                        </div>
+                        <input type="checkbox">
+                        <nav class="narvar-nav">
+                            <ul class="narvar-list">
+                                <li><a class="narvar-nav-link" href="https://www.ghbass.com/collections/new-arrivals">NEW ARRIVALS</a></li>
+                                <li><a class="narvar-nav-link" href="https://www.ghbass.com/collections/women">WOMEN</a></li>
+                                <li><a class="narvar-nav-link" href="https://www.ghbass.com/collections/men">MEN</a></li>
+                                <li><a class="narvar-nav-link" href="https://www.ghbass.com/collections/weejuns">WEEJUNS</a></li>
+                                <li><a class="narvar-nav-link" href="https://www.ghbass.com/collections/sale-view-all">SALE</a></li>
+                                <li><a class="narvar-nav-link" href="https://www.ghbass.com/collections/shop-all">SHOP ALL</a></li>
+                                <li><a class="narvar-nav-link" href="https://www.ghbass.com/pages/size-guide">SIZE GUIDE</a></li>
+                                <li><a class="narvar-nav-link" href="https://www.ghbass.com/account/login">MY ACCOUNT</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div id="content" tabindex="-1"></div>
+    </div>
+
+</body>
+</html>
